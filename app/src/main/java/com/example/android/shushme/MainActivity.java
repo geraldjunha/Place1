@@ -102,10 +102,6 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    // TODO (5) Override onConnected, onConnectionSuspended and onConnectionFailed for GoogleApiClient
-    // TODO (7) Override onResume and inside it initialize the location permissions checkbox
-    // TODO (8) Implement onLocationPermissionClicked to handle the CheckBox click event
-    // TODO (9) Implement the Add Place Button click event to show  a toast message with the permission status
     public void onLocationPermissionClicked(View view) {
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
@@ -120,4 +116,8 @@ public class MainActivity extends AppCompatActivity implements
         }
         Toast.makeText(this, getString(R.string.location_permissions_granted_message), Toast.LENGTH_LONG).show();
     }
+    // TODO (5) Override onConnected, onConnectionSuspended and onConnectionFailed for GoogleApiClient
+    // TODO (7) Override onResume and inside it initialize the location permissions checkbox
+    // TODO (8) Implement onLocationPermissionClicked to handle the CheckBox click event
+    // TODO (9) Implement the Add Place Button click event to show  a toast message with the permission status
 }
